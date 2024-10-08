@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id="employee1" class="com.constructor.injection.Employee">
+      <!-- public Employee(int id,String name,double salary)  must follow the order-->
+        <constructor-arg value="101" > </constructor-arg>
+         <constructor-arg value="David Varma"> </constructor-arg>
+          <constructor-arg value="89999.00"> </constructor-arg>
+     
+ </bean>
+ <!-- using index attribute to change the order -->
+  
+ <bean id="employee11" class="com.constructor.injection.Employee">
+      <!-- public Employee(int id,String name,double salary)  must follow the order-->
+        <constructor-arg value="102" > </constructor-arg>
+        
+          <constructor-arg value="7778"> </constructor-arg>
+           <constructor-arg index="1" value="Rohit Sharma"> </constructor-arg>
+     
+ </bean>
+ 
+ <!-- 2 params construcor object -->
+ <bean id="employee111" class="com.constructor.injection.Employee">
+      <constructor-arg value="108"></constructor-arg>
+      <constructor-arg value="Virat"></constructor-arg>
+ 
+ 
+ </bean>
+ 
+ <!--  default constructor calling  -->
+ <bean id="employee2" class="com.constructor.injection.Employee">
+      <!-- public Employee(int id,String name,double salary)  must follow the order-->
+      
+     
+ </bean>
+ 
+ 
+ 
+ <!--  setter calling -->
+ <bean id="employee4" class="com.constructor.injection.Employee">
+     
+     <property name="id" value="1000"></property>
+ 
+ 
+ </bean>
+ 
+ 
+       
+ </beans>
+ 

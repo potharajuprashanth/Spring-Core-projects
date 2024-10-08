@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   
+   <bean id="product1" class="com.flipkart.Product">
+       <property name="id" value="101"></property>
+       <property name="productName" value="Iphone16"></property>
+       <property name="price" value="150000"></property>
+   </bean>
+   
+    <bean id="product2" class="com.flipkart.Product">
+       <property name="id" value="102"></property>
+       <property name="productName" value="Realme Narzo 50a"></property>
+       <property name="price" value="23000"></property>
+   </bean>
+   
+      <bean id="order1" class="com.flipkart.Order">
+       <property name="emailId" value="potharaju@gmail.com"></property>
+       <property name="totalAmount" value="3999"></property>
+       <property name="isOrderSuccess" value="true"></property>
+       <property name="foodType" value="N"></property>
+        <property name="mobileNumber" value="9912473952"></property>
+        <property name="foodItemNames">
+             
+             <list>
+                  <value>Chicken Biryani</value>
+                  <value>Chicken Biryani</value>
+                   <value>Manchurian</value>
+                    <value>EggfrideRice</value>
+                     <value>Chai</value>
+             </list>
+        
+        </property>
+        <property name="prices">
+              
+                 <list>
+                 <value>899.98</value>
+                  <value>998.9</value>
+                   <value>6753.78</value>
+                    <value>777</value>
+                    
+                 </list>
+        
+        </property>
+   </bean>
+   
+   
+   
+</beans>

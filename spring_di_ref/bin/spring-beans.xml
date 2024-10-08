@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+<bean id="student1" class="com.prashanth.setter.injection.Student">
+    
+      <property name="id" value="101"></property>
+      <property name="name" value="Mahesh Babu"></property>
+         <property name="mobileNumbers">
+             <list>
+             <value>9912473952</value>
+              <value>9912473809</value>
+              <value>9347098702</value>
+             </list>
+         </property>
+
+
+</bean>   
+<bean id="student2" class="com.prashanth.setter.injection.Student">
+    
+      <property name="id" value="102"></property>
+      <property name="name" value="Ram Charan"></property>
+         <property name="mobileNumbers">
+             <list>
+             <value>9912473952</value>
+              <value>9912473809</value>
+              <value>9347098702</value>
+             </list>
+         </property>
+
+
+</bean>     
+<bean id="college" class="com.prashanth.setter.injection.College">
+    
+     <!--  <property name="clgName" value="Guru Nanak College OF Engineering"></property> -->
+     <property name="std" ref="student2"></property>
+
+</bean>  
+<bean id="college1" class="com.prashanth.setter.injection.College">
+    
+     <property name="clgName" value="Guru Nanak College OF Engineering"></property>
+     <property name="std" ref="student1"></property>
+
+</bean>        
+           
+</beans>
+           

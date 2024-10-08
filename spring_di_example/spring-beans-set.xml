@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean  id="student" class="com.flipkart.set.values.Student">
+     
+        <property name="name" value="Prashanth" ></property>
+        <property name="subjects">
+               <set>
+                  <value>Java</value>
+                      <value>JSP</value>
+                          <value>SERVLETS</value>
+                              <value>SPRING MVC</value>
+                                  <value>java</value>
+                                   <value>oracle</value>
+                                    <value>oracle</value>
+               </set>
+        </property>
+        <property name="subMarks">
+           <map>
+              <entry key="java" value="90">
+               
+              </entry>
+               <entry key="Java" value="78">
+                  
+              </entry>
+               <entry key="oracle" value="78">
+                 
+              </entry>
+               <entry key="JSP" value="89">
+                   
+              </entry>
+              <entry key="JSP" value="96">
+                   
+              </entry>
+           </map>
+        </property>
+   </bean>
+   
+  </beans>
