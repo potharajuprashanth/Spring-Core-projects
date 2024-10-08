@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+     <bean id="product" class="com.flipkart.orders.Product">
+     <!-- the id=product name will be the Order(Product product) this constructor name but not the private Product product; property name -->
+    
+    </bean>
+    <bean id="product1" class="com.flipkart.orders.Product">
+    
+    </bean>
+    
+    <bean id="product2" class="com.flipkart.orders.Product">
+    
+    </bean>
+
+    <bean id="transaction" class="com.flipkart.orders.Transaction">
+    
+    </bean>
+    
+    <bean id="order1" class="com.flipkart.orders.Order" autowire="constructor">
+    
+    </bean>
+
+ 
+</beans>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+           
+           <bean id="o1" class="com.flipkart.orders.Order">
+            <!-- Order(int orderId, String name, boolean isOrderSuccess, Character foodType, List<String> foodItemNames) -->
+               <constructor-arg value="101"></constructor-arg>
+                <constructor-arg value="Prashanth"></constructor-arg>
+                 <constructor-arg value="true"></constructor-arg>
+                  <constructor-arg value="N"></constructor-arg>
+                   <constructor-arg  >
+                       <list>
+                             <value>Poori</value>
+                              <value>Dosa</value>
+                               <value>Idli</value>
+                               <value>Poori</value>
+                       </list>
+                   
+                   </constructor-arg>
+           
+           
+           
+           </bean>
+           
+        <!-- public Order(Character foodType, List<String> foodItemNames) -->
+                   <bean id="o2" class="com.flipkart.orders.Order">
+           
+            
+                  <constructor-arg value="N"></constructor-arg>
+                   <constructor-arg  >
+                       <list>
+                             <value>Poori</value>
+                              <value>Bonda</value>
+                               <value>Idli</value>
+                               <value>Poori</value>
+                       </list>
+                   
+                   </constructor-arg>
+           
+           
+           
+           </bean>
+           
+           
+           <bean id="o3" class="com.flipkart.orders.Order">
+           
+              
+           
+           </bean>
+           
+          <bean id="menu" class="com.flipkart.orders.Order">
+          
+           <constructor-arg>
+               <list>
+                 <value>Poori</value>
+                  <value>Utappa</value>
+                   <value>Dosa</value>
+                    <value>Bonda</value>
+               </list>
+           </constructor-arg>
+           <constructor-arg>
+             <map>
+                  <entry key="Poori" value="70"></entry>
+                  <entry key="Dosa" value="60"></entry>
+                  <entry key="Idli" value="40"></entry>
+                  <entry key="Wada" value="30"></entry>
+                  
+             </map>
+           </constructor-arg>
+          
+          </bean>
+           
+            
+           
+           
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean id="product1" class="com.constructor.ref.ProductDetails">
+      
+      <property name="name" value="Realme"></property>
+    <property name="price" value="90099"></property>
+  <property name="pid" value="1001"></property>
+  </bean>
+  
+
+  <bean id="product2" class="com.constructor.ref.ProductDetails">
+      <property name="name" value="VIVO"></property>
+    <property name="price" value="89999"></property>
+  <property name="pid" value="1002"></property>
+   
+  
+  </bean>
+  <!-- OrderDetails(ProductDetails) constructor -->
+  <bean id="order1" class="com.constructor.ref.OrderDetails">
+     
+     <constructor-arg ref="product1"></constructor-arg>
+  
+  </bean>
+  
+  
+  <!-- OrderDetails(orderId,amount,ProductDetails) -->
+  <bean id="order2" class="com.constructor.ref.OrderDetails">
+       <constructor-arg value="101"></constructor-arg>
+        <constructor-arg value="3099"></constructor-arg>
+           <constructor-arg >
+                  <list>
+                      <ref bean="product1"/>
+                      <ref bean="product2"/>
+                  </list>
+           
+           </constructor-arg>
+    
+   
+  
+  
+  </bean>
+
+
+
+
+
+
+
+
+</beans>

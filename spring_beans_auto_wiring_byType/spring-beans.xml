@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+
+    <bean id="product" class="com.flipkart.orders.Product">
+    
+    
+    
+    </bean>
+    
+    
+    <bean id="transaction1" class="com.flipkart.orders.Transaction" autowire="byName">
+    
+    </bean>
+    
+      <!--   <bean id="transaction2" class="com.flipkart.orders.Transaction" autowire="byName">
+    ambiguty prolem come
+    </bean> -->
+
+
+<bean id="order1" class="com.flipkart.orders.Order" autowire="byType">
+     
+      
+      
+     
+     
+    </bean>
+ 
+
+
+ 
+</beans>
